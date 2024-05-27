@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Kepribadian</title>
+
+    <style>
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 150%;
+                margin-top: 50px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .question p {
+                font-size: 14px;
+            }
+            .options label {
+                font-size: 14px;
+            }
+            button {
+                font-size: 14px;
+            }
+            footer {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <style>
+        /* CSS untuk mengatur posisi logo di atas halaman */
+        .logo {
+            position: absolute;
+            top: 10px; /* Jarak logo dari bagian atas */
+            left: 25%; /* Posisi horizontal logo pertama */
+            transform: translateX(-50%); /* Pusatkan logo secara horizontal */
+            max-width: 125px; /* Atur batas maksimum lebar logo */
+            max-height: 125px; /* Atur batas maksimum tinggi logo */
+            width: auto;
+            height: auto;
+        }
+        .logo1 {
+            position: absolute;
+            top: 10px; /* Jarak logo dari bagian atas */
+            left: 75%; /* Posisi horizontal logo kedua */
+            transform: translateX(-50%); /* Pusatkan logo secara horizontal */
+            max-width: 125px; /* Atur batas maksimum lebar logo */
+            max-height: 125px; /* Atur batas maksimum tinggi logo */
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative; /* Dibutuhkan untuk posisi absolute pada logo */
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            max-width: 90%;
+            margin-top: 100px; /* Memberikan jarak agar tidak tertutup oleh logo */
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options label {
+            margin-bottom: 10px;
+            display: block;
+            font-size: 16px;
+            color: #555;
+        }
+        .result {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Hapus garis bawah pada tautan */
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+        #timer {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="timer">5:00</div>
+        <h1>Tes Kepribadian</h1>
+
+        <form id="personalityTest">
+            <div class="question">
+                <p>1. Bertindak benar dan jujur dengan risiko dibenci orang lain lebih prioritas
+                    daripada bertindak terlalu toleran melihat situasi dan kondisi.</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="1"> Sangat tidak sesuai</label>
+                    <label><input type="radio" name="q1" value="2"> Tidak sesuai</label>
+                    <label><input type="radio" name="q1" value="3"> Sesuai</label>
+                    <label><input type="radio" name="q1" value="4"> Sangat sesuai</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Jika ide yang saya tawarkan lebih baik dari hasil kesepakatan tim, saya akan
+                    memperjuangkannya seorang diri.</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="1"> Sangat tidak sesuai</label>
+                    <label><input type="radio" name="q2" value="2"> Tidak sesuai</label>
+                    <label><input type="radio" name="q2" value="3"> Sesuai</label>
+                    <label><input type="radio" name="q2" value="4"> Sangat sesuai</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. Aktif bertanya kepada guru di kelas lebih baik daripada meminta teman
+                    menjelaskan ulang.</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="1"> Sangat tidak sesuai</label>
+                    <label><input type="radio" name="q3" value="2"> Tidak sesuai</label>
+                    <label><input type="radio" name="q3" value="3"> Sesuai</label>
+                    <label><input type="radio" name="q3" value="4"> Sangat sesuai</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Saat pembelajaran di kelas, duduk di mana saja sama, yang penting saya
+                    fokus menyimak.</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="1"> Sangat tidak sesuai</label>
+                    <label><input type="radio" name="q4" value="2"> Tidak sesuai</label>
+                    <label><input type="radio" name="q4" value="3"> Sesuai</label>
+                    <label><input type="radio" name="q4" value="4"> Sangat sesuai</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. Hidup seperti air mengalir lebih saya sukai daripada membuat daftar impian
+                    untuk diraih.</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="1"> Sangat tidak sesuai</label>
+                    <label><input type="radio" name="q5" value="2"> Tidak sesuai</label>
+                    <label><input type="radio" name="q5" value="3"> Sesuai</label>
+                    <label><input type="radio" name="q5" value="4"> Sangat sesuai</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. Lebih mudah bagi saya untuk mengetahui kekurangan orang lain daripada
+                    mengetahui kekurangan sendiri.</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="1"> Sangat tidak sesuai</label>
+                    <label><input type="radio" name="q6" value="2"> Tidak sesuai</label>
+                    <label><input type="radio" name="q6" value="3"> Sesuai</label>
+                    <label><input type="radio" name="q6" value="4"> Sangat sesuai</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. Melanjutkan pendidikan lebih baik daripada fokus dengan pekerjaan
+                    sekarang.</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="1"> Sangat tidak sesuai</label>
+                    <label><input type="radio" name="q7" value="2"> Tidak sesuai</label>
+                    <label><input type="radio" name="q7" value="3"> Sesuai</label>
+                    <label><input type="radio" name="q7" value="4"> Sangat sesuai</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. Lebih baik memutuskan lalu bertindak dengan tegas, daripada bertindak
+                    sambil diiringi rasa was-was.</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="1"> Sangat tidak sesuai</label>
+                    <label><input type="radio" name="q8" value="2"> Tidak sesuai</label>
+                    <label><input type="radio" name="q8" value="3"> Sesuai</label>
+                    <label><input type="radio" name="q8" value="4"> Sangat sesuai</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. Bertindak tegas lebih baik daripada memaklumi kesalahan.</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="1"> Sangat tidak sesuai</label>
+                    <label><input type="radio" name="q9" value="2"> Tidak sesuai</label>
+                    <label><input type="radio" name="q9" value="3"> Sesuai</label>
+                    <label><input type="radio" name="q9" value="4"> Sangat sesuai</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. Saat hendak berlibur, saya adalah orang yang menentukan tempat dan
+                    waktunya.</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="1"> Sangat tidak sesuai</label>
+                    <label><input type="radio" name="q10" value="2"> Tidak sesuai</label>
+                    <label><input type="radio" name="q10" value="3"> Sesuai</label>
+                    <label><input type="radio" name="q10" value="4"> Sangat sesuai</label>
+                </div>
+            </div>
+        </form>
+
+        <button onclick="submitTest()">Submit</button>
+        <a href="beranda.html" class="btn">back</a>
+        <div id="result" class="result" style="display: none;"></div>
+
+        <footer>
+            <p>&copy; 2024 Tes Kepribadian</p>
+        </footer>
+    </div>
+
+    <script>
+        function submitTest() {
+            const form = document.getElementById('personalityTest');
+            const formData = new FormData(form);
+            let totalScore = 0;
+            for (let pair of formData.entries()) {
+                totalScore += parseInt(pair[1]);
+            }
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Total skor: ${totalScore}`;
+            resultElement.style.display = 'block';
+        }
+
+        // Fungsi untuk kembali ke halaman sebelumnya
+        function goBack() {
+            window.history.back();
+        }
+
+        // Waktu awal 5 menit (dalam detik)
+        let timeLeft = 5 * 60;
+
+        // Mengupdate timer setiap detik
+        let timerInterval = setInterval(updateTimer, 1000);
+
+        function updateTimer() {
+            // Mengubah detik menjadi menit dan detik
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+
+            // Menambahkan 0 di depan jika detik kurang dari 10
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+
+            // Menampilkan timer
+            document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+
+            // Mengurangi waktu mundur
+            timeLeft--;
+
+            // Menghentikan timer jika waktu habis
+            if (timeLeft < 0) {
+                clearInterval(timerInterval);
+                document.getElementById("timer").innerHTML = "Waktu Habis!";
+            }
+        }
+    </script>
+</body>
+</html>

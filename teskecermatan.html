@@ -1,0 +1,245 @@
+<style>
+  /* CSS untuk mengatur posisi logo di atas halaman */
+  .logo {
+    position: absolute;
+    top: 20px; /* Jarak logo dari bagian atas */
+    left: 50%; /* Pusatkan logo secara horizontal */
+    transform: translateX(-50%); /* Pusatkan logo secara horizontal */
+    max-width: 125px; /* Atur batas maksimum lebar logo */
+            max-height: 125px; /* Atur batas maksimum tinggi logo */
+            width: auto;
+            height: auto;
+        }
+  
+</style>
+</head>
+<body> 
+
+<!-- Konten HTML dengan logo di atas -->
+<img class="logo" src="images/polrilambang.png" alt="Logo Perusahaan">
+
+
+
+<style>
+
+  /* Gaya CSS dapat ditambahkan di sini */
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+  }
+  header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+  }
+  nav {
+      background-color: #444;
+      padding: 10px 0;
+      text-align: center;
+  }
+  nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+  }
+  nav a:hover {
+      background-color: #555;
+  }
+  section {
+      padding: 20px;
+  }
+  footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+  
+</style>
+</head>
+<body>
+
+
+</section>
+<footer>
+  <p>Hak Cipta &copy; 2024 Halaman kecermatan</p>
+</footer>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POLRIKU</title>
+
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  table {
+    width: 70%; /* Lebar tabel diperbesar */
+    border-collapse: collapse;
+    font-size: 50px; /* Ukuran teks diperbesar */
+  }
+  th {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 12px; /* Padding diperbesar */
+    text-align: left;
+    
+    
+  }
+  td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 50px; /* Padding diperbesar */
+    text-align: left;
+  }
+  th.long-column {
+    width: 30%; /* Lebar kolom pertama */
+    text-align: center; /* Teks di tengah */
+  }
+  
+ /* Responsiveness */
+ @media (max-width: 768px) {
+    table {
+      width: 90%;
+      font-size: 30px; /* Ukuran teks diperkecil untuk mobile */
+    }
+    th, td {
+      padding: 8px; /* Padding diperkecil untuk mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    table {
+      width: 100%;
+      font-size: 32px; /* Ukuran teks lebih diperkecil untuk layar lebih kecil */
+    }
+    th, td {
+      padding: 5px; /* Padding lebih diperkecil untuk layar lebih kecil */
+    }
+    
+  }
+
+</style>
+</head>
+<body>
+
+
+ 
+
+<table>
+  <tr>
+    <th class="long-column" colspan="5">Kolom 1 </th>
+  </tr>
+  <tr>
+    <td>G</td>
+    <td>K</td>
+    <td>o</td>
+    <td>P</td>
+    <td>q</td>
+  </tr>
+        <tr>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+          <th>D</th>
+          <th>E</th>
+
+        </tr>
+ 
+      </table>
+
+
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+        }
+        
+        #countdown {
+          font-size: 3em;
+          text-align: center;
+          position: relative;
+        }
+
+        nav {
+               position: absolute;
+            top: 50px; /* Jarak logo dari bagian atas */
+            left: 75%; /* Pusatkan logo secara horizontal */
+            transform: translateX(-50%); /* Pusatkan logo secara horizontal */
+            max-width: 125px; /* Atur batas maksimum lebar logo */
+            max-height: 125px; /* Atur batas maksimum tinggi logo */
+            width: auto;
+            height: auto;
+        }
+      
+        /* Contoh penyesuaian posisi */
+        #countdown-container {
+          position: absolute;
+          top: 65%;
+          left: 65%;
+          transform: translate(60%, 60%);
+        }
+      </style>
+      </head>
+      <body>
+      <div id="countdown-container">
+        <div id="countdown"></div>
+
+        <script>
+            function countdown() {
+                var seconds = 60; // satu menit
+                var countdownElement = document.getElementById("countdown");
+    
+                function updateCountdown() {
+                    seconds--;
+                    var minutes = Math.floor(seconds / 60);
+                    var remainingSeconds = seconds % 60;
+    
+                    minutes = (minutes < 10) ? "0" + minutes : minutes;
+                    remainingSeconds = (remainingSeconds < 10) ? "0" + remainingSeconds : remainingSeconds;
+    
+                    countdownElement.innerText = minutes + ":" + remainingSeconds;
+    
+                    if (seconds === 0) {
+                        clearInterval(interval);
+                        countdownElement.innerText = "Waktu habis!";
+                    }
+                }
+                updateCountdown(); // Memanggil fungsi pertama kali untuk menginisialisasi hitungan mundur
+    
+                var interval = setInterval(updateCountdown, 1000); // Memperbarui hitungan mundur setiap detik
+            }
+    
+            countdown(); // Memanggil fungsi hitungan mundur
+        </script>
+
+<nav>
+  <a href="beranda.html">back</a>
+
+</nav>
+      
+</body>
+</html>
+
+
+

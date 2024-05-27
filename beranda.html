@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLRIKU</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container1 img {
+            width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        table {
+            width: 90%;
+            max-width: 600px;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .foto-profil {
+            border: 3px solid #333;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .container {
+            max-width: 300px;
+            width: 100%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        /* Media query for mobile */
+        @media only screen and (max-width: 900px) {
+            .container1 {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .container1 img {
+                margin: 0 auto 10px auto;
+            }
+
+            nav {
+                display: block;
+            }
+
+            nav a {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .container {
+                max-width: 90%;
+            }
+
+            .foto-profil {
+                width: 100px;
+                height: 100px;
+            }
+
+            table {
+                width: 100%;
+            }
+            .message{
+                width: 100%;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container1">
+            <img src="images/polrilambang.png" alt="Logo Perusahaan">
+            <h1>POLRIKU</h1>
+        </div>
+    </header>
+
+    <nav>
+        <a href="hitung2.html">TES KECERDASAN</a>
+        <a href="hitung1.html">TES KEPRIBADIAN</a>
+        <a href="hitung.html">TES KECERMATAN</a>
+    </nav>
+
+    <section>
+        <div class="container">
+            <img class="foto-profil" src="images/userr.png" alt="Foto Profil">
+        </div>
+
+        <div class="container">
+            <h1>Masukkan Nama Anda</h1>
+            <input type="text" id="nameInput" placeholder="Nama Anda">
+            <button onclick="saveName()">Simpan Nama</button>
+            <div class="message" id="message"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Hak Cipta &copy; 2024 Halaman Beranda</p>
+    </footer>
+
+    <script>
+        // Function to save the name in localStorage
+        function saveName() {
+            const name = document.getElementById('nameInput').value;
+            if (name) {
+                localStorage.setItem('savedName', name);
+                displayMessage(name);
+            } else {
+                alert('Silakan masukkan nama Anda.');
+            }
+        }
+
+        // Function to display the saved name
+        function displayMessage(name) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = `Nama Anda: ${name}`;
+        }
+
+        // Check if there's a saved name in localStorage on page load
+        window.onload = function () {
+            const savedName = localStorage.getItem('savedName');
+            if (savedName) {
+                displayMessage(savedName);
+            }
+        }
+    </script>
+</body>
+
+</html>

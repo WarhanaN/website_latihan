@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PERSIAPAN</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Untuk mengisi seluruh ketinggian viewport */
+    font-family: Arial, sans-serif;
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+  
+  .big-button {
+    font-size: 24px;
+    padding: 15px 30px;
+  }
+  
+  .countdown {
+    font-size: 98px; /* Ukuran font angka hitungan mundur */
+    font-weight: bold;
+  }
+</style>
+<script>
+  function countdown() {
+    var count = 3; // Hitungan mundur dimulai dari 5 detik
+    var countdownElement = document.getElementById("countdown");
+    
+    var countdownInterval = setInterval(function() {
+      countdownElement.innerHTML = count;
+      count--;
+      
+      if (count < 0) {
+        clearInterval(countdownInterval);
+        window.location.href = "teskepribadian.html"; // Arahkan ke halaman berikutnya setelah hitungan selesai
+      }
+    }, 1000); // Update setiap 1 detik
+  }
+</script>
+</head>
+<body onload="countdown();">
+
+<div class="button-container">
+  <h1></h1>
+  <p> <span id="countdown" class="countdown">3</span></p>
+
+</div>
+
+</body>
+</html>

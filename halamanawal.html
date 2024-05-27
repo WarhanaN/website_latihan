@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLRIKU</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .logo-container {
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .logo {
+            max-width: 100%; /* Menggunakan max-width agar logo tidak melebihi lebar layar */
+            height: auto;
+        }
+        .show-logo {
+            opacity: 1;
+        }
+
+        /* Media Query untuk tampilan HP */
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 20px; /* Memberikan sedikit ruang padding pada tampilan HP */
+            }
+            .logo {
+                max-width: 80%; /* Mengurangi lebar logo agar sesuai dengan tampilan HP */
+            }
+        }
+    </style>
+    <script>
+        function showLogo() {
+            var logoContainer = document.querySelector('.logo-container');
+            logoContainer.classList.add('show-logo');
+        }
+
+        function redirectToNextPage() {
+            setTimeout(function() {
+                window.location.href = 'beranda.html';
+            }, 5000);
+        }
+
+        window.onload = function() {
+            showLogo();
+            redirectToNextPage();
+        };
+    </script>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="images/polrilambang.png" alt="Logo" class="logo">
+    </div>
+</body>
+</html>
